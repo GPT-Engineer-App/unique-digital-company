@@ -20,22 +20,28 @@ const Index = () => {
             </Link>
           </GridItem>
           <GridItem>
-            <Box p={5} shadow="md" borderWidth="1px">
-              <Heading fontSize="xl">CCTV</Heading>
-              <Text mt={4}>Our CCTV solutions offer high-quality surveillance to protect your premises.</Text>
-            </Box>
+            <Link to="/product-cctv">
+              <Box p={5} shadow="md" borderWidth="1px">
+                <Heading fontSize="xl">CCTV</Heading>
+                <Text mt={4}>Our CCTV solutions offer high-quality surveillance to protect your premises.</Text>
+              </Box>
+            </Link>
           </GridItem>
           <GridItem>
-            <Box p={5} shadow="md" borderWidth="1px">
-              <Heading fontSize="xl">PA Systems</Heading>
-              <Text mt={4}>We offer professional PA systems for clear and effective communication.</Text>
-            </Box>
+            <Link to="/product-pa">
+              <Box p={5} shadow="md" borderWidth="1px">
+                <Heading fontSize="xl">PA Systems</Heading>
+                <Text mt={4}>We offer professional PA systems for clear and effective communication.</Text>
+              </Box>
+            </Link>
           </GridItem>
           <GridItem>
-            <Box p={5} shadow="md" borderWidth="1px">
-              <Heading fontSize="xl">Electrical Low Voltage</Heading>
-              <Text mt={4}>Our electrical low voltage solutions are designed for efficiency and reliability.</Text>
-            </Box>
+            <Link to="/product-electrical-low-voltage">
+              <Box p={5} shadow="md" borderWidth="1px">
+                <Heading fontSize="xl">Electrical Low Voltage</Heading>
+                <Text mt={4}>Our electrical low voltage solutions are designed for efficiency and reliability.</Text>
+              </Box>
+            </Link>
           </GridItem>
         </SimpleGrid>
 
