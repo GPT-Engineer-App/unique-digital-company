@@ -23,14 +23,22 @@ const Index = () => {
     e.preventDefault();
 
     emailjs.send(
-      "YOUR_SERVICE_ID",
-      "YOUR_TEMPLATE_ID",
-      formData,
-      "YOUR_USER_ID"
+      "service_xxx", // Replace with your actual service ID
+      "template_xxx", // Replace with your actual template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        to_email: "bhasaworn@gmail.com" // Ensure the email is sent to the correct address
+      },
+      "user_xxx" // Replace with your actual user ID
     ).then((response) => {
       console.log("SUCCESS!", response.status, response.text);
+      alert("Quotation request sent successfully!");
     }).catch((err) => {
       console.error("FAILED...", err);
+      alert("Failed to send quotation request. Please try again later.");
     });
   };
 
