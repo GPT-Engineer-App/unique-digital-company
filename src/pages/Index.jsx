@@ -1,7 +1,39 @@
 import { Container, Text, VStack, Box, Heading, SimpleGrid, GridItem, FormControl, FormLabel, Input, Textarea, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import emailjs from "emailjs-com";
 
 const Index = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.send(
+      "YOUR_SERVICE_ID",
+      "YOUR_TEMPLATE_ID",
+      formData,
+      "YOUR_USER_ID"
+    ).then((response) => {
+      console.log("SUCCESS!", response.status, response.text);
+    }).catch((err) => {
+      console.error("FAILED...", err);
+    });
+  };
+
   return (
     <Container centerContent maxW="container.lg" py={10}>
       <VStack spacing={8} align="stretch" width="100%">
@@ -47,22 +79,22 @@ const Index = () => {
 
         <Box p={5} shadow="md" borderWidth="1px" mt={10}>
           <Heading fontSize="xl" mb={4}>Request a Quotation</Heading>
-          <form>
+          <form onSubmit={handleSubmit}>
             <FormControl id="name" mb={4}>
               <FormLabel>Name</FormLabel>
-              <Input type="text" />
+              <Input type="text" value={formData.name} onChange={handleChange} />
             </FormControl>
             <FormControl id="email" mb={4}>
               <FormLabel>Email</FormLabel>
-              <Input type="email" />
+              <Input type="email" value={formData.email} onChange={handleChange} />
             </FormControl>
             <FormControl id="phone" mb={4}>
               <FormLabel>Phone Number</FormLabel>
-              <Input type="tel" />
+              <Input type="tel" value={formData.phone} onChange={handleChange} />
             </FormControl>
             <FormControl id="message" mb={4}>
               <FormLabel>Message</FormLabel>
-              <Textarea />
+              <Textarea value={formData.message} onChange={handleChange} />
             </FormControl>
             <Button colorScheme="blue" type="submit">Submit</Button>
           </form>
