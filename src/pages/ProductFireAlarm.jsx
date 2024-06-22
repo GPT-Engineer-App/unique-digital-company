@@ -1,4 +1,4 @@
-import { Container, Text, VStack, Box, Heading, SimpleGrid, GridItem } from "@chakra-ui/react";
+import { Container, Text, VStack, Box, Heading, SimpleGrid, GridItem, Image } from "@chakra-ui/react";
 
 const ProductFireAlarm = () => {
   return (
@@ -15,18 +15,21 @@ const ProductFireAlarm = () => {
               <Box p={5} shadow="md" borderWidth="1px">
                 <Heading fontSize="lg">Simplex 4100ES</Heading>
                 <Text mt={4}>The Simplex 4100ES is a high-capacity, networkable fire alarm control panel designed for large facilities.</Text>
+                <Image src="/images/simplex_4100es.jpg" alt="Simplex 4100ES" mt={4} />
               </Box>
             </GridItem>
             <GridItem>
               <Box p={5} shadow="md" borderWidth="1px">
                 <Heading fontSize="lg">Simplex 4010ES</Heading>
                 <Text mt={4}>The Simplex 4010ES is a versatile fire alarm control panel suitable for medium-sized buildings.</Text>
+                <Image src="/images/simplex_4010es.jpg" alt="Simplex 4010ES" mt={4} />
               </Box>
             </GridItem>
             <GridItem>
               <Box p={5} shadow="md" borderWidth="1px">
                 <Heading fontSize="lg">Simplex 4007ES</Heading>
                 <Text mt={4}>The Simplex 4007ES is a compact fire alarm control panel ideal for small to medium-sized facilities.</Text>
+                <Image src="/images/simplex_4007es.jpg" alt="Simplex 4007ES" mt={4} />
               </Box>
             </GridItem>
           </SimpleGrid>
@@ -38,12 +41,14 @@ const ProductFireAlarm = () => {
               <Box p={5} shadow="md" borderWidth="1px">
                 <Heading fontSize="lg">Notifier NFS3030</Heading>
                 <Text mt={4}>The Notifier NFS3030 is a powerful fire alarm control panel designed for large-scale applications.</Text>
+                <Image src="/images/notifier_nfs3030.jpg" alt="Notifier NFS3030" mt={4} />
               </Box>
             </GridItem>
             <GridItem>
               <Box p={5} shadow="md" borderWidth="1px">
                 <Heading fontSize="lg">Notifier NFS320</Heading>
                 <Text mt={4}>The Notifier NFS320 is a reliable fire alarm control panel suitable for small to medium-sized buildings.</Text>
+                <Image src="/images/notifier_nfs320.jpg" alt="Notifier NFS320" mt={4} />
               </Box>
             </GridItem>
           </SimpleGrid>
