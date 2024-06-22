@@ -1,4 +1,5 @@
 import { Container, Text, VStack, Box, Heading, SimpleGrid, GridItem, FormControl, FormLabel, Input, Textarea, Button } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -11,10 +12,12 @@ const Index = () => {
 
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <GridItem>
-            <Box p={5} shadow="md" borderWidth="1px">
-              <Heading fontSize="xl">Fire Alarm Systems</Heading>
-              <Text mt={4}>We provide state-of-the-art fire alarm systems to ensure safety and compliance with regulations.</Text>
-            </Box>
+            <Link to="/product-fire-alarm">
+              <Box p={5} shadow="md" borderWidth="1px">
+                <Heading fontSize="xl">Fire Alarm Systems</Heading>
+                <Text mt={4}>We provide state-of-the-art fire alarm systems to ensure safety and compliance with regulations.</Text>
+              </Box>
+            </Link>
           </GridItem>
           <GridItem>
             <Box p={5} shadow="md" borderWidth="1px">
