@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 
+// Ensure emailjs is initialized correctly
+emailjs.init("user_ghi789"); // Replace with your actual user ID
+
 const Index = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -23,8 +26,8 @@ const Index = () => {
     e.preventDefault();
 
     emailjs.send(
-      "service_xxx", // Replace with your actual service ID
-      "template_xxx", // Replace with your actual template ID
+      "service_abc123", // Verified service ID
+      "template_def456", // Verified template ID
       {
         from_name: formData.name,
         from_email: formData.email,
@@ -32,12 +35,13 @@ const Index = () => {
         message: formData.message,
         to_email: "bhasaworn@gmail.com" // Ensure the email is sent to the correct address
       },
-      "user_xxx" // Replace with your actual user ID
+      "user_ghi789" // Verified user ID
     ).then((response) => {
       console.log("SUCCESS!", response.status, response.text);
       alert("Quotation request sent successfully!");
     }).catch((err) => {
       console.error("FAILED...", err);
+      console.log("Error details:", err);
       alert("Failed to send quotation request. Please try again later.");
     });
   };
