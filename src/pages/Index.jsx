@@ -1,4 +1,4 @@
-import { Container, Text, VStack, Box, Heading, SimpleGrid, GridItem } from "@chakra-ui/react";
+import { Container, Text, VStack, Box, Heading, SimpleGrid, GridItem, FormControl, FormLabel, Input, Textarea, Button } from "@chakra-ui/react";
 
 const Index = () => {
   return (
@@ -35,6 +35,29 @@ const Index = () => {
             </Box>
           </GridItem>
         </SimpleGrid>
+
+        <Box p={5} shadow="md" borderWidth="1px" mt={10}>
+          <Heading fontSize="xl" mb={4}>Request a Quotation</Heading>
+          <form>
+            <FormControl id="name" mb={4}>
+              <FormLabel>Name</FormLabel>
+              <Input type="text" />
+            </FormControl>
+            <FormControl id="email" mb={4}>
+              <FormLabel>Email</FormLabel>
+              <Input type="email" />
+            </FormControl>
+            <FormControl id="phone" mb={4}>
+              <FormLabel>Phone Number</FormLabel>
+              <Input type="tel" />
+            </FormControl>
+            <FormControl id="message" mb={4}>
+              <FormLabel>Message</FormLabel>
+              <Textarea />
+            </FormControl>
+            <Button colorScheme="blue" type="submit">Submit</Button>
+          </form>
+        </Box>
       </VStack>
     </Container>
   );
