@@ -51,7 +51,7 @@ const Index = () => {
       <VStack spacing={8} align="stretch" width="100%">
         <Box textAlign="center">
           <Heading as="h1" size="2xl">EnTK Supply</Heading>
-          <Text fontSize="lg">386/191 ถนนกาญจนาภิเษก แขวงดอกไม้ เขตประเวศ กทม. 10250</Text>
+          <Text fontSize="lg">386/191 Kanchanaphisek Road, Dokmai, Prawet, Bangkok 10250</Text>
         </Box>
 
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
